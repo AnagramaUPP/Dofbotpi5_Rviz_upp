@@ -140,11 +140,13 @@ ros2 run tf2_ros tf2_echo world tool0
 
 Esto permite conocer la posición y orientación de la herramienta respecto al sistema global `world`.
 
+Para solucionarlo, reemplaza toda esa sección de tu README.md por este código Markdown:
+
 ## 🔢 5. Matriz de transformación homogénea
 
 La posición y orientación del efector final pueden representarse mediante la matriz homogénea:
 
-\[
+$$
 {}^{0}T_{tool0} =
 \begin{bmatrix}
 r_{11} & r_{12} & r_{13} & p_x \\
@@ -152,9 +154,20 @@ r_{21} & r_{22} & r_{23} & p_y \\
 r_{31} & r_{32} & r_{33} & p_z \\
 0 & 0 & 0 & 1
 \end{bmatrix}
-\]
+$$
 
 Donde:
+
+- **R:** matriz de rotación de 3×3.
+- **p:** vector de posición del efector final.
+- **base_link:** marco de referencia 0.
+- **tool0:** marco de la herramienta final.
+
+La transformación puede obtenerse mediante:
+
+```bash
+ros2 run tf2_ros tf2_echo base_link tool0
+```
 
 - **R:** matriz de rotación de 3×3.
 - **p:** vector de posición del efector final.
