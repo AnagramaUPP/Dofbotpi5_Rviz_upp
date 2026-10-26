@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+
+<robot name="dofbotpi5">
+
+<link name="world"/>
+<joint name="world_to_base" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>    
+</joint>
+
+
+<link name="base_link">
+    <inertial>
+        <origin xyz="-0.05232791 -0.00004507 0.01355022" rpy="0.0 0.0 0.0"/>
+        <mass value="0.17370020"/>
+        <inertia ixx="0.00030514" ixy="-0.00000023" ixz="0.00012838" iyy="0.00102969" iyz="-0.00000025" izz="0.00109187"/>
+    </inertial>
+    <visual>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://dofbotpi5_jazzy/meshes/Base_link.STL"/>
+        </geometry>
+
+    </visual>
+    <collision>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://dofbotpi5_jazzy/meshes/Base_link.STL"/>
+        </geometry>
+    </collision>
+</link>
+
+<joint name="j1" type="revolute">
+    <origin xyz="0.0 0.0 0.104474" rpy="0.0 0.0 0.0"/>
+    <parent link="base_link"/>
+    <child link="link_1"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit lower="-3.1415" upper="3.1415" effort="10.0" velocity="2.0"/>
+</joint>
+
+<link name="link_1">
+    <inertial>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <mass value="0.1669"/>
+        <inertia ixx="0.00000515250" ixy="0.0" ixz="0.0" iyy="0.00000449739" iyz="0.0" izz="0.00000609539"/>
+    </inertial>
+    <visual name="">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://dofbotpi5_jazzy/meshes/Link_1.STL"/>
+        </geometry>
+                        <material name="azul">
+            <color rgba="0.1 0.35 0.95 1.0"/>
+        </material>
+    </visual>
+    <collision>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <geometry>
+             <mesh filename="package://dofbotpi5_jazzy/meshes/Link_1.STL"/>
+        </geometry>
+    </collision>
+</link>
+
+<joint name="j2" type="revolute">
+    <origin xyz="0.0 -0.01935 0.0" rpy="1.57 0.0 0.0"/>
+    <parent link="link_1"/>
+    <child link="link_2"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit lower="-3.1415" upper="3.1415" effort="10.0" velocity="2.0"/>
+    </joint>
+
+<link name="link_2">
+    <inertial>
+        <origin xyz="0.0 0.0 -0.02819" rpy="0.0 0.0 0.0"/>
+        <mass value="0.01669"/>
+        <inertia
+            ixx="0.00000515250"
+            ixy="0.0"
+            ixz="0.0"
+            iyy="0.00000449739"
+            iyz="0.0"
+            izz="0.00000609539"/>
+    </inertial>
+
+    <visual>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://dofbotpi5_jazzy/meshes/Link_2.STL"/>
+        </geometry>
+        <material name="naranja">
+    <color rgba="1.0 0.45 0.05 1.0"/>
+</material>
+    </visual>
+
+    <collision>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://dofbotpi5_jazzy/meshes/Link_2.STL"/>
+        </geometry>
+    </collision>
+</link>
+
+<joint name="j3" type="revolute">
+    <origin xyz="0.0 0.08285000 -0.0006500" rpy="0.0 0.0 1.57"/>
+    <parent link="link_2"/>
+    <child link="link_3"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit lower="-3.1415" upper="3.1415" effort="10.0" velocity="2.0"/>
+    </joint>
+
+<link name="link_3">
+    <inertial>
+        <origin xyz="0.01895 0.00232 -0.01995" rpy="0 0 0"/>
+        <mass value="0.03079"/>
+        <inertia
+            ixx="0.00000560444"
+            ixy="-0.00000045503"
+            ixz="0.00000000688"
+            iyy="0.00001869138"
+            iyz="-0.00000001527"
+            izz="0.00001689221"/>
+    </inertial>
+
+    <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <mesh filename="package://dofbotpi5_jazzy/meshes/Link_3.STL"/>
+        </geometry>
+        <material name="verde">
+    <color rgba="0.1 0.8 0.25 1.0"/>
+</material>
+    </visual>
+
+    <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <mesh filename="package://dofbotpi5_jazzy/meshes/Link_3.STL"/>
+        </geometry>
+    </collision>
+</link>
+
+
+<joint name="j4" type="revolute">
+    <origin xyz="0.08285000 0.00215 -0.021305" rpy="0.0 0.0 0.0"/>
+    <parent link="link_3"/>
+    <child link="link_4"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit lower="-3.1415" upper="3.1415" effort="10.0" velocity="2.0"/>
+    </joint>
+
+
+
+<link name="link_4">
+    <inertial>
+        <origin xyz="0.00272 -0.01236 0.00071" rpy="0 0 0"/>
+        <mass value="0.02625"/>
+        <inertia
+            ixx="0.00000776705"
+            ixy="-0.00000001665"
+            ixz="-0.00000001585"
+            iyy="0.00000386103"
+            iyz="-0.00000001635"
+            izz="0.00000727275"/>
+    </inertial>
+
+    <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+             <mesh filename="package://dofbotpi5_jazzy/meshes/Link_4.STL"/>
+        </geometry>
+        <material name="rojo">
+            <color rgba="0.9 0.1 0.1 1.0"/>
+        </material>
+    </visual>
+
+    <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+             <mesh filename="package://dofbotpi5_jazzy/meshes/Link_4.STL"/>
+        </geometry>
+    </collision>
+</link>
+
+<joint name="j45" type="fixed">
+    <origin xyz="0.0795 0.0 0.0" rpy="1.57 0.0 1.57"/>
+    <parent link="link_4"/>
+    <child link="link_5"/>
+    
+    <limit lower="-3.1415" upper="3.1415" effort="10.0" velocity="2.0"/>
+</joint>
+
+<link name="link_5">
+    <inertial>
+        <origin xyz="0.00305 -0.00022 -0.02264" rpy="0 0 0"/>
+        <mass value="0.03523"/>
+        <inertia
+            ixx="0.00000675209"
+            ixy="0.00000020297"
+            ixz="0.00000356325"
+            iyy="0.00002706607"
+            iyz="-0.00000000911"
+            izz="0.00002456887"/>
+    </inertial>
+
+    <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <mesh filename="package://dofbotpi5_jazzy/meshes/Link_5.STL"/>
+        </geometry>
+        <material name="morado">
+            <color rgba="0.6 0.2 0.8 1.0"/>
+        </material>
+    </visual>
+
+    <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <mesh filename="package://dofbotpi5_jazzy/meshes/Link_5.STL"/>
+        </geometry>
+    </collision>
+</link>
+<joint name="j5" type="revolute">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="link_5"/>
+    <child link="link_6"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit lower="-3.1415" upper="3.1415" effort="10.0" velocity="2.0"/>
+</joint>
+<link name="link_6">
+    <inertial>
+        <origin xyz="0.00305 -0.00022 -0.02264" rpy="0 0 0"/>
+        <mass value="0.03523"/>
+        <inertia
+            ixx="0.00000675209"
+            ixy="0.00000020297"
+            ixz="0.00000356325"
+            iyy="0.00002706607"
+            iyz="-0.00000000911"
+            izz="0.00002456887"/>
+    </inertial>
+
+    <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <mesh filename="package://dofbotpi5_jazzy/meshes/gripper.STL"/>
+        </geometry>
+<material name="rosa">
+    <color rgba="1.0 0.4 0.7 1.0"/>
+</material>
+    </visual>
+
+    <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <mesh filename="package://dofbotpi5_jazzy/meshes/gripper.STL"/>
+        </geometry>
+    </collision>
+</link>
+<joint name="end_effector" type="fixed">
+    <origin xyz="0.0 0.0 0.0836147" rpy="0.0 0.0 0.0"/>
+    <parent link="link_6"/>
+    <child link="tool0"/>
+</joint>
+
+<link name="tool0"/>
+</robot>
+
