@@ -1,4 +1,5 @@
 # 🤖 DOFBOTpi5 — ROS 2 Jazzy
+<img width="1070" height="1914" alt="image" src="https://github.com/user-attachments/assets/9f8cb2cc-e636-4050-85a9-600e4f50199a" />
 
 Paquete de ROS 2 Jazzy para la visualización, descripción y análisis cinemático del brazo robótico **DOFBOTpi5** mediante URDF, RViz2 y TF2.
 
@@ -226,6 +227,7 @@ ros2 run tf2_ros tf2_echo world tool0
 ```
 
 ---
+<img width="1456" height="586" alt="image" src="https://github.com/user-attachments/assets/abb7dbbb-e001-409e-a689-b113fb6562f3" />
 
 ## 📚 Referencias
 
