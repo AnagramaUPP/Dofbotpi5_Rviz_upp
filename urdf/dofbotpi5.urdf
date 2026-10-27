@@ -35,7 +35,7 @@
     <parent link="base_link"/>
     <child link="link_1"/>
     <axis xyz="0.0 0.0 1.0"/>
-    <limit lower="-3.1415" upper="3.1415" effort="10.0" velocity="2.0"/>
+   <limit lower="-1.5708" upper="1.5708" effort="10.0" velocity="2.0"/>
 </joint>
 
 <link name="link_1">
@@ -66,7 +66,7 @@
     <parent link="link_1"/>
     <child link="link_2"/>
     <axis xyz="0.0 0.0 1.0"/>
-    <limit lower="-3.1415" upper="3.1415" effort="10.0" velocity="2.0"/>
+<limit lower="-1.5708" upper="1.5708" effort="10.0" velocity="2.0"/>
     </joint>
 
 <link name="link_2">
@@ -105,7 +105,7 @@
     <parent link="link_2"/>
     <child link="link_3"/>
     <axis xyz="0.0 0.0 1.0"/>
-    <limit lower="-3.1415" upper="3.1415" effort="10.0" velocity="2.0"/>
+    <limit lower="-2.3911" upper="1.7453" effort="10.0" velocity="2.0"/>
     </joint>
 
 <link name="link_3">
@@ -145,7 +145,7 @@
     <parent link="link_3"/>
     <child link="link_4"/>
     <axis xyz="0.0 0.0 1.0"/>
-    <limit lower="-3.1415" upper="3.1415" effort="10.0" velocity="2.0"/>
+    <limit lower="-1.5708" upper="1.5708" effort="10.0" velocity="2.0"/>
     </joint>
 
 
@@ -186,20 +186,21 @@
     <parent link="link_4"/>
     <child link="link_5"/>
     
-    <limit lower="-3.1415" upper="3.1415" effort="10.0" velocity="2.0"/>
+    <limit lower="-1.5708" upper="3.1416" effort="10.0" velocity="2.0"/>
 </joint>
+
 
 <link name="link_5">
     <inertial>
-        <origin xyz="0.00305 -0.00022 -0.02264" rpy="0 0 0"/>
-        <mass value="0.03523"/>
+        <origin xyz="-0.01556681 -0.00231897 0.03158126" rpy="0 0 0"/>
+        <mass value="0.04738955"/>
         <inertia
-            ixx="0.00000675209"
-            ixy="0.00000020297"
-            ixz="0.00000356325"
-            iyy="0.00002706607"
-            iyz="-0.00000000911"
-            izz="0.00002456887"/>
+            ixx="0.00002316"
+            ixy="0.00000027"
+            ixz="0.00000292"
+            iyy="0.00002093"
+            iyz="0.00000042"
+            izz="0.00002108"/>
     </inertial>
 
     <visual>
@@ -219,6 +220,7 @@
         </geometry>
     </collision>
 </link>
+
 <joint name="j5" type="revolute">
     <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
     <parent link="link_5"/>
